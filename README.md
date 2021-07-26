@@ -14,5 +14,20 @@ Selenium es un framework de automatización de navegadores multilenguaje. Con é
 - Utilizar comandos básicos
 - Preparar entorno de trabajo
 --------------------
+**Configurando el Entorno**
+1. Ubicación de python: **where python** (En Linux es which python)
+2. Versión de python: **python --version**
+3. Tener instalado Anaconda para el manejo de los entornos virtuales
+4. Verificamos la lista de entornos: **conda env list** o **conda info --envs**
+5. Creamos el entorno: conda create -n <nombre_del_entorno> python=<version_python> anaconda
+6. Verificamos que se halla creado con el comando del paso 4
+7. Activamos el entorno: **conda activate** <nombre_del_entorno>
+8. Verificamos la version de Python con el comando del paso 2
+9. Actualizamos pip: **pip install -U pip** (Si sale error: **pip install --user -U pip**)
+10. Instalar Selenium: **pip install selenium**
+11. Verificar los paquetes: **pip list --local**
+12. Abrimos Anaconda Navigator: **anaconda-navigator**
+13. Ejecutamos VS Code en el Anaconda Navigator
+14. Para desactivar el entorno:  **conda deactivate**
 
 Exitos!! 🔥
