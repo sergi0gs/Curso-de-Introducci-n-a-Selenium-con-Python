@@ -1,3 +1,7 @@
+# Para ejecutar el programa es necesario tener una versión de Python entre 3.6 y 3.8
+# Instalar selenium y pyunitreport
+# Se sugiere usar Anaconda para gestionar los entornos virtuales
+
 import unittest
 from pyunitreport import HTMLTestRunner
 from selenium import webdriver
@@ -18,6 +22,10 @@ class HelloWorld(unittest.TestCase):
     def test_vist_wikipedia(self):
         driver = self.driver
         driver.get('https://www.wikipedia.org')
+
+    def test_instore_view(self):
+        driver = self.driver
+        driver.get('https://www.instoreview.cl/')
 
     # Acciones al terminar la automatización
     @classmethod
