@@ -4,9 +4,10 @@ from selenium import webdriver
 
 class HelloWorld(unittest.TestCase):
     #Preprar el entorno de la prueba
-    def setUp(self):
-        self.driver = webdriver.Chrome(executable_path = r'C:\SERGIO\PLATZI\Curso de Introducción a Selenium con Python\chromedriver.exe')
-        driver = self.driver
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = webdriver.Chrome(executable_path = r'C:\SERGIO\PLATZI\Curso de Introducción a Selenium con Python\chromedriver.exe')
+        driver = cls.driver
         driver.implicitly_wait(10) #Esper 10 segundos antes de la siguiente accion
 
     # Acciones para la automatización
@@ -19,8 +20,9 @@ class HelloWorld(unittest.TestCase):
         driver.get('https://www.wikipedia.org')
 
     # Acciones al terminar la automatización
-    def tearDown(self):
-        self.driver.quit() # Cerrar la ventana del navegador
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit() # Cerrar la ventana del navegador
 
 if __name__ == "__main__":
     unittest.main(verbosity = 2, 
