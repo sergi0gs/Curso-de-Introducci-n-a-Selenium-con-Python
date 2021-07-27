@@ -4,7 +4,7 @@ import unittest
 from selenium import webdriver
 
 class HomePageTests(unittest.TestCase):
-    def setUp(self) -> None:
+    def setUp(self):
         self.driver = webdriver.Chrome(executable_path = './chromedriver.exe')
         driver = self.driver
         driver.get('http://demo.onestepcheckout.com/')
@@ -36,7 +36,7 @@ class HomePageTests(unittest.TestCase):
     def test_shopping_cart(self):
         shopping_cart_icon = self.driver.find_element_by_css_selector("div.header-minicart span.icon")
 
-    def tearDown(self) -> None:
+    def tearDown(self):
         self.driver.quit()
     
 if __name__ == '__main__':
