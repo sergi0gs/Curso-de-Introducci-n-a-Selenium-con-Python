@@ -36,6 +36,7 @@ class LanguageOptions(unittest.TestCase):
 
         select_language = Select(self.driver.find_element_by_id('select-language'))
         select_language.select_by_index(0)
+        
 
 
     def tearDown(self):
