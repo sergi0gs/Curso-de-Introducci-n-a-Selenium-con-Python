@@ -3,7 +3,8 @@ from selenium import webdriver
 
 class RegisterNewUse(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path = './chromedriver.exe')
+        #self.driver = webdriver.Chrome(executable_path = './chromedriver.exe')
+        self.driver = webdriver.Chrome(executable_path = './chromedriver')
         driver = self.driver
         driver.implicitly_wait(10)
         driver.maximize_window()
