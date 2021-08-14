@@ -16,12 +16,12 @@ def get_data(file_name):
 @ddt
 class SearchDDT(unittest.TestCase):
     def setUp(self):
-        self.driver= webdriver.Chrome(executable_path= "/home/yanina/Downloads/chromedriver")
+        self.driver= webdriver.Chrome(executable_path= "./chromedriver")
         driver= self.driver
         driver.implicitly_wait(10)
         driver.maximize_window()
         driver.get('http://demo-store.seleniumacademy.com')
-        
+
     @data(*get_data('testdata.csv'))
     @unpack
     def test_search_ddt(self, search_value, expected_count):
